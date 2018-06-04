@@ -6,6 +6,7 @@ $main-sky: #DFE3E8;
 $main-ltr-blue: #EBF5FA;
 $main-blue:#007ACE;
 $main-indigo: #5C6AC4;
+$main-ltr-teal: #E0F5F5;
 $main-purple: #9C6ADE;
 
 $round-borders: 20px;
@@ -39,18 +40,22 @@ body {
 
 h1, h2, p {
     font-family: $font-stack;
-    font-size:36px;
+    font-size:48px;
+}
+
+h1 {
+    color: $main-indigo;
 }
 
 h2 {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 16px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
 p {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 20px;
     font-weight: 400;
 }
@@ -73,15 +78,40 @@ p {
     margin-bottom:100px;
 }
 
+.margin-fix::after {
+    content: "Choose your own adventure:";
+    font-size: 16px;
+    display: block;
+}
+
 .item-container {
     margin-left:18px;
 }
 
+.item:nth-of-type(1n) {
+    background: $main-ltr-teal;
+}
+
+.item:nth-of-type(2n) {
+    background: $main-ltr-blue;
+}
+
 .item {
     max-width:450px;
-    margin:auto;
+    margin-left:auto;
+    margin-right:auto;
     padding:30px;
     text-align:center;
-    border: thin #333 solid;
     margin-bottom:100px;
+    border-radius: $round-borders;
+    opacity:0.8;
+    transition: box-shadow 0.5s, transform 0.5s, opacity 0.5s;
+}
+
+.item:hover {
+    -webkit-box-shadow: 10px 10px 2px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 10px 10px 2px 0px rgba(0,0,0,0.25);
+    box-shadow: 10px 10px 2px 0px rgba(0,0,0,0.25);
+    transform: scale(1.05);
+    opacity: 1;
 }
