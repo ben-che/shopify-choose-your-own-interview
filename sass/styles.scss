@@ -1,0 +1,87 @@
+$font-stack: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+
+$main-lighter: #F9FAFB;
+$main-light: #F4F6F8;
+$main-sky: #DFE3E8;
+$main-ltr-blue: #EBF5FA;
+$main-blue:#007ACE;
+$main-indigo: #5C6AC4;
+$main-purple: #9C6ADE;
+
+$round-borders: 20px;
+
+// the shopify stack:
+html {
+font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe
+    UI, Helvetica Neue, sans-serif;
+
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+
+text-size-adjust: 100%;
+
+text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+}
+
+body {
+    background-color:$main-sky;
+    padding-left:2.5%;
+    padding-right:2.5%;
+}
+
+h1, h2, p {
+    font-family: $font-stack;
+    font-size:36px;
+}
+
+h2 {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.splash-container {
+    transform: skew(0deg, -10deg);
+    background: $main-lighter;
+    margin-top:-200px;
+
+    .unskew-text {
+        transform:skew(0deg, 10deg);
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+}
+
+.margin-fix {
+    margin-top:30vh;
+    text-align:center;
+    margin-bottom:100px;
+}
+
+.item-container {
+    margin-left:18px;
+}
+
+.item {
+    max-width:450px;
+    margin:auto;
+    padding:30px;
+    text-align:center;
+    border: thin #333 solid;
+    margin-bottom:100px;
+}
